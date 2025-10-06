@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentAI Pro | Premium Document Explainer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
+</head>
+<body data-color-scheme="dark">
+
+    <!-- HERO / LANDING SCREEN -->
+    <section id="heroScreen" class="hero-screen">
+        <div class="hero-background">
+            <div class="holographic-overlay"></div>
+            <div class="gradient-mesh"></div>
+        </div>
+        <nav class="hero-nav">
+            <div class="nav-content">
+                <div class="brand-premium">
+                    <div class="brand-icon-premium"><span class="icon-glow">📄</span></div>
+                    <div class="brand-text-premium">
+                        <span class="brand-name">RentAI Pro</span>
+                        <span class="brand-tagline">Instant Lease Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-content-premium">
+            <main class="hero-main">
+                <div class="hero-badge">
+                    <span class="badge-icon">✨</span>
+                    <span class="badge-text">Powered by LLaMA 3 & Advanced AI</span>
+                </div>
+                <h1 class="hero-title-premium">
+                    <span class="title-line">Unlock Your Rental</span>
+                    <span class="title-line title-highlight">Agreement Instantly</span>
+                </h1>
+                <p class="hero-subtitle-premium">
+                    Stop guessing. Get clear, AI-powered answers about your lease in seconds. Upload your document and experience the future of rental intelligence.
+                </p>
+                <div class="hero-cta-premium">
+                    <button id="getStartedBtn" class="cta-button-premium">
+                        <span class="btn-bg-gradient"></span>
+                        <span class="btn-content">
+                            Get Started Now <span class="btn-arrow">→</span>
+                        </span>
+                    </button>
+                    <p class="cta-note-premium">Free, secure, and confidential analysis.</p>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- MAIN APPLICATION CONTAINER (Initially Hidden) -->
+    <div id="appContainer" class="app-container hidden">
+        <header class="app-header-premium">
+            <div class="header-glass-bg"></div>
+            <div class="header-content-premium">
+                <div class="header-left-premium">
+                    <div class="brand-premium small">
+                        <div class="brand-icon-premium small"><span class="icon-glow">📄</span></div>
+                    </div>
+                    <div class="status-indicator-premium">
+                        <div class="status-pulse"></div>
+                        <span class="status-text-premium">Ready for Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout-premium">
+            <!-- SIDEBAR -->
+            <aside id="sidebar" class="sidebar-premium">
+                <div class="sidebar-glass-bg"></div>
+                <div class="sidebar-header-premium">
+                    <h2 class="sidebar-title-premium">CONTROLS</h2>
+                </div>
+                <div class="sidebar-content-premium">
+                    <div class="model-card-premium">
+                        <div class="model-header">
+                             <div class="model-icon-container">
+                                <span class="model-icon">🤖</span>
+                            </div>
+                            <div class="model-info">
+                                <h3>LLaMA 3</h3>
+                                <span class="model-provider">Ollama Self-Hosted</span>
+                            </div>
+                        </div>
+                         <div class="model-status-premium">
+                            <div class="status-indicator-small">
+                                <div class="status-dot-animated"></div>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="section-header-premium">
+                            <h3 class="section-title-premium">1. Upload Document(s)</h3>
+                        </div>
+                        <div id="uploadZone" class="upload-zone-premium">
+                            <div class="upload-holographic-bg"></div>
+                            <div id="uploadContent" class="upload-content-premium">
+                               <p class="upload-title-premium">Drag & Drop PDFs Here</p>
+                               <span class="upload-subtitle-premium">or click to browse</span>
+                            </div>
+                            <div id="uploadProgress" class="upload-progress-premium hidden">
+                                <p id="progressText">Processing...</p>
+                            </div>
+                        </div>
+                        <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+                    </div>
+                    
+                    <div id="uploadedFiles"></div>
+
+                    <div id="actionsContainer" class="hidden">
+                         <div class="section-header-premium">
+                            <h3 class="section-title-premium">2. Actions</h3>
+                        </div>
+                        <div class="action-buttons-premium">
+                            <button id="summarizeBtn" class="action-btn-premium primary" disabled>
+                                <span class="btn-content-premium">Generate Summary</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT (CHAT) -->
+            <main class="main-content-premium">
+                <div id="welcomeState" class="welcome-state-premium">
+                    <div class="welcome-content-premium">
+                        <h1 class="welcome-title-premium">Ready for Analysis</h1>
+                        <p class="welcome-text-premium">Please upload one or more PDF documents in the sidebar to begin.</p>
+                    </div>
+                </div>
+
+                <div id="chatInterface" class="chat-interface-premium hidden">
+                    <div id="messagesContainer" class="messages-container-premium"></div>
+                    <div class="chat-input-area-premium">
+                        <textarea id="chatInput" placeholder="Ask anything about your document..." rows="1"></textarea>
+                        <button id="sendButton" class="send-button-premium"><span>⬆️</span></button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <div id="toastContainer" class="toast-container-premium"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
