@@ -20,29 +20,29 @@ This project demonstrates **full-stack GenAI engineering** — ideal for Data Sc
 
 ## 🌟 Features
 
-### ✅ AI-Powered Document Question Answering  
+### AI-Powered Document Question Answering  
 Ask natural language questions about lease/rental agreements:  
 - “What is the notice period?”  
 - “Is there a penalty for early termination?”  
 - “Who is responsible for repairs?”  
 
-### ✅ Accurate Retrieval-Augmented Generation (RAG)  
+### Accurate Retrieval-Augmented Generation (RAG)  
 Uses:
 - **Recursive text chunking**
 - **Embedding generation (`nomic-embed-text`)**
 - **FAISS vector indexing**
 - **Context-enforced prompting (no hallucinations)**
 
-### ✅ Dual LLM Support (Automatic Switching)
+### Dual LLM Support (Automatic Switching)
 - **Groq-hosted LLaMA 3.1 (8B Instant)** — fast, cloud inference  
 - **Ollama local models (TinyLLaMA)** — for offline/secure use  
 
-### ✅ Full Production Backend  
+### Full Production Backend  
 Built in Flask with clean endpoints:
 - `/api/upload` — processes PDFs → chunks → embeddings → FAISS index  
 - `/api/ask` — retrieves relevant chunks + generates answers  
 
-### ✅ Premium Frontend UI  
+### Premium Frontend UI  
 - Modern landing page  
 - Drag & drop PDF upload  
 - Real chat interface  
@@ -50,7 +50,7 @@ Built in Flask with clean endpoints:
 - Toast notifications  
 - Beautiful CSS design system  
 
-### ✅ Dockerized for Real Deployment  
+### Dockerized for Real Deployment  
 Model pulling, server startup, and Gunicorn worker configuration — all handled inside a robust `run.sh`.
 
 ---
