@@ -16,7 +16,6 @@ Built with:
 
 This project demonstrates **full-stack GenAI engineering** — ideal for Data Scientist + AI Engineer roles.
 
----
 
 ##  Features
 
@@ -55,7 +54,7 @@ Model pulling, server startup, and Gunicorn worker configuration — all handled
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 User → Web UI → Flask API → FAISS Vector DB → LLaMA 3 (Groq/Ollama) → Response │ └── Embeddings → Chunking → Indexing
 
@@ -102,7 +101,7 @@ FAISS stores dense vectors for fast retrieval.
 ### **6. Response Generation**
 Clean, contextual answers are returned to the chat UI.
 
----
+
 
 ## 🚀 Getting Started
 
@@ -163,7 +162,7 @@ Response:
 
 ---
 
-🧠 Technologies Used
+Technologies Used
 
 AI & RAG
 
@@ -205,23 +204,7 @@ Ollama runtime
 Shell automation
 
 
----
 
- Future Enhancements
-
-Support for multiple LLM providers (OpenAI, Claude, Gemini)
-
-Multi-document summarization
-
-Clause extraction & classification
-
-Policy comparison engine
-
-User authentication & session-based vector stores
-
-
-
----
 
 👤 Author
 
