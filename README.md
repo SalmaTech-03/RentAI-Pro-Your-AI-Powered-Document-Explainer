@@ -1,6 +1,6 @@
 
 
-# 🏡 RentAI Pro — AI-Powered Rental Agreement Explainer
+#  RentAI Pro — AI-Powered Rental Agreement Explainer
 **A production-grade RAG (Retrieval-Augmented Generation) system that analyzes rental/lease agreements using LLaMA 3, FAISS vector search, advanced embeddings, and a premium real-time chat UI.**
 
 RentAI Pro enables users to upload rental agreements (PDFs) and instantly ask questions, extract clauses, validate terms, and understand legal details using a secure, self-hosted AI pipeline.
@@ -18,7 +18,7 @@ This project demonstrates **full-stack GenAI engineering** — ideal for Data Sc
 
 ---
 
-## 🌟 Features
+##  Features
 
 ### AI-Powered Document Question Answering  
 Ask natural language questions about lease/rental agreements:  
@@ -68,7 +68,7 @@ User → Web UI → Flask API → FAISS Vector DB → LLaMA 3 (Groq/Ollama) → 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 RENTAL-AGREEMENT-BOT/ │ ├── backend.py                # Flask backend + RAG pipeline ├── Dockerfile                # Docker deployment + model pulling ├── requirements.txt ├── run.sh                    # Auto-generated via Dockerfile │ ├── templates/ │   └── index.html            # Frontend page │ ├── static/ │   ├── style.css             # UI design system │   └── script.js             # Chat logic + file upload + UX │ └── README.md                 # You're reading it
 
@@ -207,7 +207,7 @@ Shell automation
 
 ---
 
-🔮 Future Enhancements
+ Future Enhancements
 
 Support for multiple LLM providers (OpenAI, Claude, Gemini)
 
